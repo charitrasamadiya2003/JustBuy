@@ -2,140 +2,184 @@
    RESET + BASE STYLING
 ---------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #fafafa;
-    color: #333;
-    line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Smooth shadow for cards */
 .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------
+   MAKE ALL IMAGES RESPONSIVE
+---------------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ----------------------------------
    NAVBAR
 ---------------------------------- */
 .navbar {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link {
-    transition: color 0.2s ease;
-    font-size: 17px;
+  transition: color 0.2s ease;
+  font-size: 17px;
+  padding: 10px 16px;
 }
 
 .nav-link:hover {
-    color: #d4d4d4 !important;
+  color: #d4d4d4 !important;
+}
+
+/* Mobile menu spacing */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+/* Fix logo size */
+.navbar-brand img {
+  height: 50px;
+  width: auto;
 }
 
 /* ----------------------------------
    HEADER SECTIONS
 ---------------------------------- */
 .text-center.p-5 {
-    background: linear-gradient(135deg, #f1f1f1, #ffffff);
+  background: linear-gradient(135deg, #f1f1f1, #ffffff);
 }
 
 /* Titles */
-h1, h2, h3 {
-    font-weight: 600;
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 
 /* ----------------------------------
    CATEGORY LIST (index.html)
 ---------------------------------- */
 .list-group-item {
-    font-size: 18px;
-    padding: 14px;
-    transition: background 0.2s ease;
+  font-size: 18px;
+  padding: 14px;
+  transition: background 0.2s ease;
 }
 
 /* ----------------------------------
    PRODUCT CARDS (products.html)
 ---------------------------------- */
 .card-title {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .card-text {
-    font-size: 18px;
-    color: #444;
+  font-size: 18px;
+  color: #444;
 }
 
 /* Add to cart button */
 .btn-primary {
-    background-color: black;
-    border: none;
-    transition: background 0.3s ease;
+  background-color: black;
+  border: none;
+  transition: background 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
 /* ----------------------------------
    CONTACT PAGE FORM
 ---------------------------------- */
 form {
-    background: white;
-    border-radius: 10px;
+  background: white;
+  border-radius: 10px;
 }
 
-form input, form textarea {
-    font-size: 16px;
+form input,
+form textarea {
+  font-size: 16px;
 }
 
 form button {
-    font-size: 18px;
-    padding: 10px;
+  font-size: 18px;
+  padding: 10px;
 }
 
 /* ----------------------------------
    CART PAGE
 ---------------------------------- */
 .cart-item {
-    transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 .cart-item:hover {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.remove-btn, .btn-danger {
-    background-color: #e40000;
-    border: none;
+/* Remove button style */
+.remove-btn,
+.btn-danger {
+  background-color: #e40000;
+  border: none;
 }
 
-.remove-btn:hover, .btn-danger:hover {
-    background-color: #b80000;
+.remove-btn:hover,
+.btn-danger:hover {
+  background-color: #b80000;
 }
 
 /* Total section */
 .container.my-4 h2 {
-    font-size: 28px;
-    font-weight: bold;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ----------------------------------
+   CART RESPONSIVE FIXES
+---------------------------------- */
+@media (max-width: 768px) {
+  .d-flex.flex-wrap {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .d-flex.flex-wrap img {
+    margin-bottom: 12px;
+  }
 }
 
 /* ----------------------------------
    FOOTER
 ---------------------------------- */
 footer {
-    background: #111;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 16px;
+  background: #f8f9fa; /* match bg-light */
+  color: #212529;
+  padding: 15px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 16px;
 }
